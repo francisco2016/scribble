@@ -56,10 +56,25 @@ public class DrawDemo
         Pen pen = new Pen(320, 260, myCanvas);
         pen.setColor(Color.GREEN);
         for(int i = 0; i<5; i ++){
-            pen.move(100);
+            pen.move(60);
             pen.turn(-72);
         }
     }
+    
+    
+     /**
+     * Draw a drawPolygon on the screen.  -------------------------------------------------------------------------------  0099
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(320, 260, myCanvas);
+        pen.setColor(Color.GREEN);
+        for(int i = 0; i<n; i ++){
+            pen.move(80);
+            pen.turn(-360/n);
+        }
+    }
+       
 
     /**
      * Draw a wheel made of many squares.
