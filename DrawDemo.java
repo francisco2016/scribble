@@ -34,6 +34,23 @@ public class DrawDemo
 
         square(pen);
     }
+    
+    /**
+     * Draw a square on the screen.  -------------------------------------------------------------------------------  0099
+     */
+    public void drawTriangle(int x, int y)
+    {
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+        for(int i = 0; i<3; i ++){
+            pen.move(150);
+            pen.turn(-120);
+        }
+        
+   
+    }
+
+
 
     /**
      * Draw a wheel made of many squares.
