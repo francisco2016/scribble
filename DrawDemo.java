@@ -34,7 +34,7 @@ public class DrawDemo
 
         square(pen);
     }
-    
+
     /**
      * Draw a triangle on the screen.  -------------------------------------------------------------------------------  0099
      */
@@ -47,8 +47,8 @@ public class DrawDemo
             pen.turn(-120);
         }
     }
-    
-     /**
+
+    /**
      * Draw a pentagono on the screen.  -------------------------------------------------------------------------------  0099
      */
     public void drawPentagon()
@@ -60,9 +60,8 @@ public class DrawDemo
             pen.turn(-72);
         }
     }
-    
-    
-     /**
+
+    /**
      * Draw a drawPolygon on the screen.  -------------------------------------------------------------------------------  0099
      */
     public void drawPolygon(int n)
@@ -74,7 +73,23 @@ public class DrawDemo
             pen.turn(-360/n);
         }
     }
-       
+
+    /**
+     * Dibuja una espiral  -------------------------------------------------------------------------------  0099
+     *      '''''''''''''''??????????????????????????????????????????????????????????????????????????????
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen (60,  5, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        int tamanno = 300;
+        while(   tamanno > 1){
+                pen.move (tamanno)   ;
+                pen.turn(90 );
+                tamanno = tamanno -3;
+        }
+    }
 
     /**
      * Draw a wheel made of many squares.
@@ -114,11 +129,11 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
     }
-    
+
     /**
      * Clear the screen.
      */
